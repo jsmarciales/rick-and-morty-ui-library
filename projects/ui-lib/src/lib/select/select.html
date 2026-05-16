@@ -1,0 +1,36 @@
+<div class="flex flex-col gap-1">
+
+  <label class="text-xs text-green-400 font-medium uppercase tracking-wider">
+    {{ label() }}
+  </label>
+
+  <div class="relative">
+
+    @if (loading()) {
+      <div class="w-full bg-[#0a0f0a] border border-slate-700 rounded-lg px-3 py-2 opacity-50">
+        <div class="h-4 bg-green-900/30 rounded animate-pulse"></div>
+      </div>
+    } @else {
+      <select
+        #selectRef
+        [class]="selectClasses()"
+        [disabled]="disabled()"
+        [value]="value() ?? ''"
+        (change)="onChange(selectRef.value)">
+
+        <option value="" disabled>{{ placeholder() }}</option>
+
+        @for (option of options(); track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+        }
+
+      </select>
+
+      <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-green-400">
+        ▾
+      </span>
+    }
+
+  </div>
+
+</div>
