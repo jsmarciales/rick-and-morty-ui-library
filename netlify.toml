@@ -1,6 +1,9 @@
 [build]
-  command = "npm install && npx ng build demo-app --configuration production"
+  command = "npm ci && npx ng build demo-app --configuration production"
   publish = "dist/demo-app/browser"
+
+[build.environment]
+  NODE_VERSION = "22"
 
 [[redirects]]
   from = "/*"
