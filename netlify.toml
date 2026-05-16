@@ -1,3 +1,7 @@
+[build]
+  command = "npm install && npx ng build demo-app --configuration production"
+  publish = "dist/demo-app/browser"
+
 [[redirects]]
   from = "/*"
   to = "/index.html"
