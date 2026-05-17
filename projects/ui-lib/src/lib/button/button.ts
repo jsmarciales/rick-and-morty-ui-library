@@ -1,13 +1,7 @@
 import { Component, ChangeDetectionStrategy, input, output, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/**
- * Botón reutilizable con soporte para variantes, tamaños, estado de carga y deshabilitado.
- *
- * @example
- * <ui-button label="Guardar" variant="primary" (clicked)="onSave()" />
- * <ui-button label="Cargando..." [loading]="true" />
- */
+/** Botón. */
 @Component({
   selector: 'ui-button',
   standalone: true,

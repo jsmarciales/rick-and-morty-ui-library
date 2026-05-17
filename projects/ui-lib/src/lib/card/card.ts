@@ -1,15 +1,7 @@
 import { Component, ChangeDetectionStrategy, input, output, computed } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/**
- * Tarjeta con header (título, subtítulo) y body proyectado vía ng-content.
- * El header es clickeable y emite un evento.
- *
- * @example
- * <ui-card title="Rick Sanchez" subtitle="Human" elevation="raised" (headerClicked)="close()">
- *   <p>Contenido del body...</p>
- * </ui-card>
- */
+/** Componente de tarjeta. */
 @Component({
   selector: 'ui-card',
   standalone: true,

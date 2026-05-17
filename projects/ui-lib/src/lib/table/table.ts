@@ -3,19 +3,16 @@ import { CommonModule } from '@angular/common';
 
 /** Definición de una columna de la tabla. */
 export interface TableColumn {
-  /** Clave para acceder al valor en la fila. */
   key: string;
-  /** Texto visible en el encabezado. */
   header: string;
-  /** Tipo de renderizado de la celda. */
   type?: 'text' | 'image';
 }
 
-/** Acción emitida por la tabla al interactuar con una fila. */
+
 export interface TableAction<T> {
   /** Tipo de acción ejecutada. */
   action: 'view' | 'delete';
-  /** Fila sobre la que se ejecutó la acción. */
+
   row: T;
 }
 
